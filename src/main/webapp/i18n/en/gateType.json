@@ -1,0 +1,9 @@
+{
+  "cpamainApp": {
+    "GateType": {
+      "null": "",
+      "HUMAN": "HUMAN",
+      "VEHICLE": "VEHICLE"
+    }
+  }
+}

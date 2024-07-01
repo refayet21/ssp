@@ -1,0 +1,10 @@
+{
+  "cpamainApp": {
+    "PassUserType": {
+      "null": "",
+      "HUMAN": "HUMAN",
+      "VEHICLE": "VEHICLE",
+      "BOTH": "BOTH"
+    }
+  }
+}

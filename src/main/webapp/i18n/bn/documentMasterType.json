@@ -1,0 +1,10 @@
+{
+  "cpamainApp": {
+    "DocumentMasterType": {
+      "null": "",
+      "PERSONDOC": "PERSONDOC",
+      "AGENCYDOC": "AGENCYDOC",
+      "VEHICLEDOC": "VEHICLEDOC"
+    }
+  }
+}

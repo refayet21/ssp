@@ -1,0 +1,39 @@
+{
+  "annotations": {
+    "changelogDate": "20240701144936"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "code",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "PostOffice",
+  "relationships": [
+    {
+      "otherEntityName": "address",
+      "otherEntityRelationshipName": "postOffice",
+      "relationshipName": "address",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "district",
+      "relationshipName": "district",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

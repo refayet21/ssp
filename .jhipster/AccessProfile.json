@@ -1,0 +1,47 @@
+{
+  "annotations": {
+    "changelogDate": "20240701144949"
+  },
+  "applications": "*",
+  "documentation": "The AccessProfile entity.\\n@author A true hipster",
+  "fields": [
+    {
+      "documentation": "fieldName",
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "startTimeOfDay",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "endTimeOfDay",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "dayOfWeek",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "action",
+      "fieldType": "ActionType",
+      "fieldValues": "ALLOW,DENY"
+    }
+  ],
+  "name": "AccessProfile",
+  "relationships": [
+    {
+      "otherEntityName": "lane",
+      "otherEntityRelationshipName": "accessProfile",
+      "relationshipName": "lane",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

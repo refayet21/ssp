@@ -1,0 +1,46 @@
+{
+  "annotations": {
+    "changelogDate": "20240701144939"
+  },
+  "applications": "*",
+  "documentation": "The DocumentType entity.\\n@author A true hipster",
+  "fields": [
+    {
+      "documentation": "fieldName",
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "isActive",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "documentMasterType",
+      "fieldType": "DocumentMasterType",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "PERSONDOC,AGENCYDOC,VEHICLEDOC"
+    },
+    {
+      "fieldName": "requiresVerification",
+      "fieldType": "Boolean"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "DocumentType",
+  "relationships": [
+    {
+      "otherEntityName": "document",
+      "otherEntityRelationshipName": "documentType",
+      "relationshipName": "document",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

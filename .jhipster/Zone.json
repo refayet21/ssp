@@ -1,0 +1,47 @@
+{
+  "annotations": {
+    "changelogDate": "20240701144946"
+  },
+  "applications": "*",
+  "documentation": "The Zone entity.\\n@author A true hipster",
+  "fields": [
+    {
+      "documentation": "fieldName",
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "shortName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "location",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isActive",
+      "fieldType": "Boolean"
+    }
+  ],
+  "name": "Zone",
+  "relationships": [
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "agency",
+      "otherEntityRelationshipName": "zone",
+      "relationshipName": "authority",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "gate",
+      "otherEntityRelationshipName": "zone",
+      "relationshipName": "gate",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

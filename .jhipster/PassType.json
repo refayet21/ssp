@@ -1,0 +1,78 @@
+{
+  "annotations": {
+    "changelogDate": "20240701144944"
+  },
+  "applications": "*",
+  "documentation": "The PassType entity.\\n@author A true hipster",
+  "fields": [
+    {
+      "documentation": "fieldName",
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "shortName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isActive",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "printedName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "issueFee",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "renewFee",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "cancelFee",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "minimumDuration",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "maximumDuration",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "issueChannelType",
+      "fieldType": "IssueChannelType",
+      "fieldValues": "ONPREM,ONLINE,THIRD_PARTY"
+    },
+    {
+      "fieldName": "taxCode",
+      "fieldType": "TaxCodeType",
+      "fieldValues": "VAT,NOVAT"
+    },
+    {
+      "fieldName": "passMediaType",
+      "fieldType": "PassMediaType",
+      "fieldValues": "BARCODE,QRCODE,CHIPCARD,BIOMETRIC"
+    },
+    {
+      "fieldName": "passUserType",
+      "fieldType": "PassUserType",
+      "fieldValues": "HUMAN,VEHICLE,BOTH"
+    }
+  ],
+  "name": "PassType",
+  "relationships": [
+    {
+      "otherEntityName": "agency",
+      "otherEntityRelationshipName": "passType",
+      "relationshipName": "agency",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

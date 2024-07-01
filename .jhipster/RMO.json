@@ -1,0 +1,30 @@
+{
+  "annotations": {
+    "changelogDate": "20240701144932"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "code",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "RMO",
+  "relationships": [
+    {
+      "otherEntityName": "cityCorpPoura",
+      "otherEntityRelationshipName": "rmo",
+      "relationshipName": "cityCorpPoura",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

@@ -1,0 +1,491 @@
+entity Person {
+    name String required
+    shortName String  maxlength(30)
+    dob LocalDate required
+    email String maxlength(100) //filter
+    isBlackListed Boolean
+    fatherName String
+    motherName String
+    logStatus  LogStatusType
+
+}
+enum LogStatusType{
+
+DRAFT,PENDING ,APPROVED, REJECTED
+}
+
+paginate Person with pagination
+
+
+
+entity Address{
+    addressLineOne String required
+    addressLineTwo String
+    addressLineThree String
+    addressType AddressType required
+
+}
+paginate Address with pagination
+
+entity Division{
+    name String required
+}
+
+entity District{
+    name String required
+}
+
+entity Upazila{
+    name String required
+
+}
+
+filter Upazila
+ entity RMO{
+    name String required
+    code String required
+ }
+
+ entity CityCorpPoura{
+
+    name String required
+
+ }
+
+ entity Union{
+    name String required
+ }
+ filter Union
+
+entity Ward{
+    name String required
+}
+
+
+
+entity PostOffice{
+    name String required
+    code String  required
+
+}
+filter PostOffice
+
+
+
+
+relationship OneToMany{
+    Division  to District { division(name) required}
+
+    District  to Upazila {district(name) required}
+    District  to CityCorpPoura {district(name)}
+    District  to PostOffice {district(name) required}
+
+    Upazila to Union {upazila(name) required}
+    Upazila to CityCorpPoura {upazila(name)}
+
+    CityCorpPoura to Ward {cityCorpPoura(name)}
+    CityCorpPoura to Address {cityCorpPoura(name)}
+
+    Union to Ward {union(name)}
+    Union to Address{union(name)}
+
+    RMO to CityCorpPoura {rmo(name) required}
+    PostOffice to Address {postOffice(name) required}
+
+}
+
+
+
+
+entity Country {
+    name String
+    isoCode String
+}
+
+
+
+entity Document{
+    isPrimary Boolean
+    serial String  required
+    issueDate LocalDate
+    expiryDate LocalDate
+    filePath String
+    
+}
+paginate Document with pagination
+filter Document
+
+/**
+ * The DocumentType entity.
+ * @author A true hipster
+ */
+entity DocumentType {
+    /** fieldName */
+    name String required
+    isActive Boolean
+    description String
+    documentMasterType DocumentMasterType required
+    requiresVerification Boolean
+    
+}
+filter DocumentType
+
+enum DocumentMasterType  {
+    PERSONDOC, AGENCYDOC,VEHICLEDOC
+}
+
+/**
+ * One to many relationship.
+ */
+relationship OneToMany {
+    DocumentType to Document {documentType required}
+  
+}
+
+
+/**
+ * The Entity entity.
+ * @author A true hipster
+ */
+entity Agency {
+    /** fieldName */
+    name String required
+    shortName String
+   @defaultValue(false) isInternal Boolean
+   @defaultValue(false) isDummy Boolean
+}
+paginate Agency with pagination
+filter Agency
+
+entity AgencyType {
+    name String
+    shortName String
+    isActive Boolean
+}
+
+entity Assignment {
+    startDate LocalDate required
+    endDate LocalDate
+    isPrimary Boolean
+}
+paginate Assignment with pagination
+filter Assignment
+
+/**
+ * The Entity entity.
+ * @author A true hipster
+ */
+entity Designation {
+    /** fieldName */
+    name String required
+    shortName String
+    isActive Boolean
+}
+
+/**
+ * The PassType entity.
+ * @author A true hipster
+ */
+entity PassType {
+    /** fieldName */
+    name String
+    shortName String
+    isActive Boolean
+    printedName String
+    issueFee Double
+    renewFee Double
+    cancelFee Double
+    minimumDuration Long
+    maximumDuration Long
+    issueChannelType IssueChannelType
+    taxCode TaxCodeType
+    passMediaType PassMediaType
+    passUserType PassUserType
+}
+
+/**
+ * The Pass entity.
+ * @author A true hipster
+ */
+entity Pass {
+    /** fieldName */
+
+    collectedFee Double
+    fromDate Instant
+    endDate Instant
+    status PassStatusType
+    passNumber Long
+    mediaSerial String
+}
+paginate Pass with pagination
+filter Pass
+
+
+
+/**
+ * The Zone entity.
+ * @author A true hipster
+ */
+entity Zone {
+    /** fieldName */
+    name String
+    shortName String
+    location String
+    isActive Boolean
+}
+
+/**
+ * One to one relationship.
+ */
+
+
+/**
+ * The Gate entity.
+ * @author A true hipster
+ */
+entity Gate {
+    /** fieldName */
+    name String
+    shortName String
+    lat Float
+    lon Float
+    gateType GateType
+    isActive Boolean
+
+}
+
+filter Gate
+
+
+/**
+ * The Lane entity.
+ * @author A true hipster
+ */
+entity Lane {
+    /** fieldName */
+    name String
+    shortName String
+    direction DirectionType
+    isActive Boolean
+
+}
+
+filter Lane
+
+/**
+ * The AccessProfile entity.
+ * @author A true hipster
+ */
+entity AccessProfile {
+    /** fieldName */
+    name String
+    description String
+    startTimeOfDay Integer
+    endTimeOfDay Integer
+    dayOfWeek Integer
+    action ActionType
+}
+ enum ActionType{
+    ALLOW, DENY
+}
+
+/**
+ * The Vehicle entity.
+ * @author A true hipster
+ */
+entity Vehicle {
+    /** fieldName */
+    name String
+    regNo String
+    zone String
+    category String
+    serialNo String
+    vehicleNo String
+    chasisNo String
+    isPersonal Boolean
+    isBlackListed Boolean
+    logStatus  LogStatusType
+}
+
+filter Vehicle
+paginate Vehicle with pagination
+
+
+/**
+ * The VehicleAssigment entity.
+ * @author A true hipster
+ */
+entity VehicleAssignment {
+    startDate LocalDate required
+    endDate LocalDate
+    isPrimary Boolean
+    isRental Boolean
+}
+paginate VehicleAssignment with pagination
+filter VehicleAssignment
+
+
+/**
+ * The VehicleType entity.
+ * @author A true hipster
+ */
+entity VehicleType {
+    /** fieldName */
+    name String
+    numberOfOperators Integer
+}
+/**
+ * The EntryLog entity.
+ * @author A true hipster
+ */
+entity EntryLog {
+    /** fieldName */
+    eventTime Instant
+    direction DirectionType
+    passStatus PassStatusType
+    actionType ActionType
+}
+
+paginate EntryLog with pagination
+filter EntryLog
+
+
+
+/**
+ * The License entity.
+ * @author A true hipster
+ */
+entity AgencyLicense {
+    /** fieldName */
+
+    filePath String
+    serialNo String
+    issueDate LocalDate
+    expiryDate LocalDate
+
+}
+
+filter AgencyLicense
+paginate AgencyLicense with pagination
+
+
+/**
+ * One to many relationship.
+ */
+
+
+/**
+ * The Department entity.
+ * @author A true hipster
+ */
+entity Department {
+    /** fieldName */
+    name String
+
+}
+
+/**
+ * The License entity.
+ * @author A true hipster
+ */
+entity AgencyLicenseType {
+    /** fieldName */
+    name String required
+    isActive Boolean
+}
+
+
+enum AddressType {
+    PRESENT, PERMANENT, HQ, BRANCH
+}
+
+enum IssueChannelType {
+    ONPREM, ONLINE, THIRD_PARTY
+}
+
+enum PassUserType {
+    HUMAN, VEHICLE, BOTH
+}
+
+enum PassMediaType {
+    BARCODE, QRCODE, CHIPCARD, BIOMETRIC
+}
+
+
+enum PassStatusType {
+    REQUESTED, PRINTED, ACTIVATED, READY, BLOCKED, CANCEL, EXPIRED
+}
+
+enum TaxCodeType {
+    VAT, NOVAT
+}
+
+enum GateType {
+    HUMAN, VEHICLE
+}
+
+enum DirectionType {
+    IN, OUT, BOTH
+}
+
+
+relationship ManyToOne {
+
+   Pass{passType(name) required} to PassType
+   Pass{requestedBy(login) required} to User with builtInEntity
+   Pass {assignment required} to Assignment
+   Zone{authority(name)} to Agency{zone(name)}
+   Gate{zone(name)} to Zone{gate(name)}
+   Vehicle{vehicleType(name)} to VehicleType
+   VehicleAssignment{agency(name)} to Agency
+ }
+
+
+ relationship OneToMany {
+   Country to Person{nationality(name)}
+   Country to Address{country(name)}
+   Person to Address{person }
+   Agency to Address {agency }
+   Person to Document {person }
+   Vehicle to Document {vehicle }
+   Agency to Document {agency }
+   Person to Assignment{person required}
+   Designation to  Assignment{designation(shortName) required}
+    Agency to Assignment{agency required}
+   AgencyType to Agency{agencyType(name) required}
+   Gate to Lane{gate(name)}
+   Pass{entryLog} to EntryLog{pass}
+   VehicleAssignment to Pass
+   Lane to EntryLog{lane required}
+   Vehicle{vehicleAssigment} to VehicleAssignment{vehicle}
+   AgencyLicenseType to AgencyLicense{agencyLicenseType required}
+   Agency{license} to AgencyLicense{belongsTo }
+   Agency{issuer} to AgencyLicense{issuedBy}
+   Agency{department(name)} to Department{agency(name)}
+ }
+ /**
+  * Many to many relationship.
+  */
+ relationship ManyToMany {
+   PassType to Agency
+    AccessProfile to Lane
+
+ }
+
+
+relationship OneToOne {
+  Person{internalUser(login)} to User with builtInEntity
+}
+/**
+ * Many to one relationship.
+ */
+relationship ManyToOne {
+    Document{verifiedBy(login)} to User with builtInEntity
+    AgencyLicense{verifiedBy(login)} to User with builtInEntity
+}
+
+// dto * with mapstruct
+ // Set service options to all except few
+service all with serviceImpl
+
+

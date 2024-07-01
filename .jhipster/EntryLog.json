@@ -1,0 +1,50 @@
+{
+  "annotations": {
+    "changelogDate": "20240701144953"
+  },
+  "applications": "*",
+  "documentation": "The EntryLog entity.\\n@author A true hipster",
+  "fields": [
+    {
+      "documentation": "fieldName",
+      "fieldName": "eventTime",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "direction",
+      "fieldType": "DirectionType",
+      "fieldValues": "IN,OUT,BOTH"
+    },
+    {
+      "fieldName": "passStatus",
+      "fieldType": "PassStatusType",
+      "fieldValues": "REQUESTED,PRINTED,ACTIVATED,READY,BLOCKED,CANCEL,EXPIRED"
+    },
+    {
+      "fieldName": "actionType",
+      "fieldType": "ActionType",
+      "fieldValues": "ALLOW,DENY"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "EntryLog",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "pass",
+      "otherEntityRelationshipName": "entryLog",
+      "relationshipName": "pass",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "lane",
+      "relationshipName": "lane",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

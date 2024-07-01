@@ -11,7 +11,59 @@
     <property name="datetimeType" value="datetime(6)" dbms="mysql"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144927_added_entity_Person.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144928_added_entity_Address.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144929_added_entity_Division.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144930_added_entity_District.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144931_added_entity_Upazila.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144932_added_entity_RMO.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144933_added_entity_CityCorpPoura.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144934_added_entity_Union.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144935_added_entity_Ward.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144936_added_entity_PostOffice.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144937_added_entity_Country.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144938_added_entity_Document.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144939_added_entity_DocumentType.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144940_added_entity_Agency.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144941_added_entity_AgencyType.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144942_added_entity_Assignment.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144943_added_entity_Designation.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144944_added_entity_PassType.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144945_added_entity_Pass.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144946_added_entity_Zone.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144947_added_entity_Gate.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144948_added_entity_Lane.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144949_added_entity_AccessProfile.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144950_added_entity_Vehicle.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144951_added_entity_VehicleAssignment.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144952_added_entity_VehicleType.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144953_added_entity_EntryLog.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144954_added_entity_AgencyLicense.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144955_added_entity_Department.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144956_added_entity_AgencyLicenseType.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20240701144927_added_entity_constraints_Person.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144928_added_entity_constraints_Address.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144930_added_entity_constraints_District.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144931_added_entity_constraints_Upazila.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144933_added_entity_constraints_CityCorpPoura.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144934_added_entity_constraints_Union.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144935_added_entity_constraints_Ward.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144936_added_entity_constraints_PostOffice.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144938_added_entity_constraints_Document.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144940_added_entity_constraints_Agency.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144942_added_entity_constraints_Assignment.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144944_added_entity_constraints_PassType.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144945_added_entity_constraints_Pass.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144946_added_entity_constraints_Zone.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144947_added_entity_constraints_Gate.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144948_added_entity_constraints_Lane.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144949_added_entity_constraints_AccessProfile.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144950_added_entity_constraints_Vehicle.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144951_added_entity_constraints_VehicleAssignment.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144953_added_entity_constraints_EntryLog.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144954_added_entity_constraints_AgencyLicense.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240701144955_added_entity_constraints_Department.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
 </databaseChangeLog>

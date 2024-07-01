@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <!--
+        Added the constraints for entity EntryLog.
+    -->
+    <changeSet id="20240701144953-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="pass_id"
+                                 baseTableName="entry_log"
+                                 constraintName="fk_entry_log__pass_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="pass"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="lane_id"
+                                 baseTableName="entry_log"
+                                 constraintName="fk_entry_log__lane_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="lane"
+                                 />
+    </changeSet>
+</databaseChangeLog>

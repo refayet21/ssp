@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <!--
+        Added the constraints for entity Document.
+    -->
+    <changeSet id="20240701144938-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="verified_by_id"
+                                 baseTableName="document"
+                                 constraintName="fk_document__verified_by_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="jhi_user"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="document_type_id"
+                                 baseTableName="document"
+                                 constraintName="fk_document__document_type_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="document_type"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="person_id"
+                                 baseTableName="document"
+                                 constraintName="fk_document__person_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="person"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="vehicle_id"
+                                 baseTableName="document"
+                                 constraintName="fk_document__vehicle_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="vehicle"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="agency_id"
+                                 baseTableName="document"
+                                 constraintName="fk_document__agency_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="agency"
+                                 />
+    </changeSet>
+</databaseChangeLog>

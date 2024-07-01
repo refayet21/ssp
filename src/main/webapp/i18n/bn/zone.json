@@ -1,0 +1,32 @@
+{
+  "cpamainApp": {
+    "zone": {
+      "home": {
+        "title": "Zones",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Zone",
+        "createOrEditLabel": "Create or edit a Zone",
+        "notFound": "No Zones found"
+      },
+      "created": "A new Zone is created with identifier {{ param }}",
+      "updated": "A Zone is updated with identifier {{ param }}",
+      "deleted": "A Zone is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Zone {{ id }}?"
+      },
+      "detail": {
+        "title": "Zone"
+      },
+      "id": "ID",
+      "name": "Name",
+      "shortName": "Short Name",
+      "location": "Location",
+      "isActive": "Is Active",
+      "authority": "Authority",
+      "gate": "Gate",
+      "help": {
+        "name": "fieldName"
+      }
+    }
+  }
+}

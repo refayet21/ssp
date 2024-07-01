@@ -1,0 +1,22 @@
+{
+  "annotations": {
+    "changelogDate": "20240701144952"
+  },
+  "applications": "*",
+  "documentation": "The VehicleType entity.\\n@author A true hipster",
+  "fields": [
+    {
+      "documentation": "fieldName",
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "numberOfOperators",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "VehicleType",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

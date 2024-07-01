@@ -1,0 +1,33 @@
+{
+  "cpamainApp": {
+    "accessProfile": {
+      "home": {
+        "title": "Access Profiles",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Access Profile",
+        "createOrEditLabel": "Create or edit a Access Profile",
+        "notFound": "No Access Profiles found"
+      },
+      "created": "A new Access Profile is created with identifier {{ param }}",
+      "updated": "A Access Profile is updated with identifier {{ param }}",
+      "deleted": "A Access Profile is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Access Profile {{ id }}?"
+      },
+      "detail": {
+        "title": "Access Profile"
+      },
+      "id": "ID",
+      "name": "Name",
+      "description": "Description",
+      "startTimeOfDay": "Start Time Of Day",
+      "endTimeOfDay": "End Time Of Day",
+      "dayOfWeek": "Day Of Week",
+      "action": "Action",
+      "lane": "Lane",
+      "help": {
+        "name": "fieldName"
+      }
+    }
+  }
+}

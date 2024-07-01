@@ -1,0 +1,33 @@
+{
+  "cpamainApp": {
+    "lane": {
+      "home": {
+        "title": "Lanes",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Lane",
+        "createOrEditLabel": "Create or edit a Lane",
+        "notFound": "No Lanes found"
+      },
+      "created": "A new Lane is created with identifier {{ param }}",
+      "updated": "A Lane is updated with identifier {{ param }}",
+      "deleted": "A Lane is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Lane {{ id }}?"
+      },
+      "detail": {
+        "title": "Lane"
+      },
+      "id": "ID",
+      "name": "Name",
+      "shortName": "Short Name",
+      "direction": "Direction",
+      "isActive": "Is Active",
+      "entryLog": "Entry Log",
+      "gate": "Gate",
+      "accessProfile": "Access Profile",
+      "help": {
+        "name": "fieldName"
+      }
+    }
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "annotations": {
+    "changelogDate": "20240701144927"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "shortName",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "30"
+    },
+    {
+      "fieldName": "dob",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "100"
+    },
+    {
+      "fieldName": "isBlackListed",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "fatherName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "motherName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "logStatus",
+      "fieldType": "LogStatusType",
+      "fieldValues": "DRAFT,PENDING,APPROVED,REJECTED"
+    }
+  ],
+  "name": "Person",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityField": "login",
+      "otherEntityName": "user",
+      "relationshipName": "internalUser",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one",
+      "relationshipWithBuiltInEntity": true
+    },
+    {
+      "otherEntityName": "address",
+      "otherEntityRelationshipName": "person",
+      "relationshipName": "address",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "document",
+      "otherEntityRelationshipName": "person",
+      "relationshipName": "document",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "assignment",
+      "otherEntityRelationshipName": "person",
+      "relationshipName": "assignment",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "country",
+      "relationshipName": "nationality",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

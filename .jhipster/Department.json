@@ -1,0 +1,27 @@
+{
+  "annotations": {
+    "changelogDate": "20240701144955"
+  },
+  "applications": "*",
+  "documentation": "The Department entity.\\n@author A true hipster",
+  "fields": [
+    {
+      "documentation": "fieldName",
+      "fieldName": "name",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Department",
+  "relationships": [
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "agency",
+      "otherEntityRelationshipName": "department",
+      "relationshipName": "agency",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

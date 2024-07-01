@@ -1,0 +1,41 @@
+{
+  "annotations": {
+    "changelogDate": "20240701144931"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Upazila",
+  "relationships": [
+    {
+      "otherEntityName": "union",
+      "otherEntityRelationshipName": "upazila",
+      "relationshipName": "union",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "cityCorpPoura",
+      "otherEntityRelationshipName": "upazila",
+      "relationshipName": "cityCorpPoura",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "district",
+      "relationshipName": "district",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

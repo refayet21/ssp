@@ -1,0 +1,106 @@
+{
+  "annotations": {
+    "changelogDate": "20240701144940"
+  },
+  "applications": "*",
+  "documentation": "The Entity entity.\\n@author A true hipster",
+  "fields": [
+    {
+      "documentation": "fieldName",
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "shortName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isInternal",
+      "fieldType": "Boolean",
+      "options": {
+        "defaultValue": true
+      }
+    },
+    {
+      "fieldName": "isDummy",
+      "fieldType": "Boolean",
+      "options": {
+        "defaultValue": true
+      }
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Agency",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "address",
+      "otherEntityRelationshipName": "agency",
+      "relationshipName": "address",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "document",
+      "otherEntityRelationshipName": "agency",
+      "relationshipName": "document",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "assignment",
+      "otherEntityRelationshipName": "agency",
+      "relationshipName": "assignment",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "agencyLicense",
+      "otherEntityRelationshipName": "belongsTo",
+      "relationshipName": "license",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "agencyLicense",
+      "otherEntityRelationshipName": "issuedBy",
+      "relationshipName": "issuer",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "department",
+      "otherEntityRelationshipName": "agency",
+      "relationshipName": "department",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "agencyType",
+      "relationshipName": "agencyType",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "zone",
+      "otherEntityRelationshipName": "authority",
+      "relationshipName": "zone",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "passType",
+      "otherEntityRelationshipName": "agency",
+      "relationshipName": "passType",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

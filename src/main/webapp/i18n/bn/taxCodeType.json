@@ -1,0 +1,9 @@
+{
+  "cpamainApp": {
+    "TaxCodeType": {
+      "null": "",
+      "VAT": "VAT",
+      "NOVAT": "NOVAT"
+    }
+  }
+}

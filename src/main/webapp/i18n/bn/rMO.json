@@ -1,0 +1,26 @@
+{
+  "cpamainApp": {
+    "rMO": {
+      "home": {
+        "title": "RMOS",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new RMO",
+        "createOrEditLabel": "Create or edit a RMO",
+        "notFound": "No RMOS found"
+      },
+      "created": "A new RMO is created with identifier {{ param }}",
+      "updated": "A RMO is updated with identifier {{ param }}",
+      "deleted": "A RMO is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete RMO {{ id }}?"
+      },
+      "detail": {
+        "title": "RMO"
+      },
+      "id": "ID",
+      "name": "Name",
+      "code": "Code",
+      "cityCorpPoura": "City Corp Poura"
+    }
+  }
+}

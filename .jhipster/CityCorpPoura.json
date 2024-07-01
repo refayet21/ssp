@@ -1,0 +1,54 @@
+{
+  "annotations": {
+    "changelogDate": "20240701144933"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "CityCorpPoura",
+  "relationships": [
+    {
+      "otherEntityName": "ward",
+      "otherEntityRelationshipName": "cityCorpPoura",
+      "relationshipName": "ward",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "address",
+      "otherEntityRelationshipName": "cityCorpPoura",
+      "relationshipName": "address",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "district",
+      "relationshipName": "district",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "upazila",
+      "relationshipName": "upazila",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "rMO",
+      "relationshipName": "rmo",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

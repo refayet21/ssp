@@ -1,0 +1,50 @@
+{
+  "annotations": {
+    "changelogDate": "20240701144942"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "startDate",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "endDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "isPrimary",
+      "fieldType": "Boolean"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Assignment",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "person",
+      "relationshipName": "person",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityField": "shortName",
+      "otherEntityName": "designation",
+      "relationshipName": "designation",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityName": "agency",
+      "relationshipName": "agency",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

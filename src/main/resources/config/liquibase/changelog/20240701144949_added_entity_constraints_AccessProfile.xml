@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <!--
+        Added the constraints for entity AccessProfile.
+    -->
+    <changeSet id="20240701144949-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="access_profile_id"
+                                 baseTableName="rel_access_profile__lane"
+                                 constraintName="fk_rel_access_profile__lane__access_profile_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="access_profile"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="lane_id"
+                                 baseTableName="rel_access_profile__lane"
+                                 constraintName="fk_rel_access_profile__lane__lane_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="lane"
+                                 />
+    </changeSet>
+</databaseChangeLog>

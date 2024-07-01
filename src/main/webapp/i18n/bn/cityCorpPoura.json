@@ -1,0 +1,29 @@
+{
+  "cpamainApp": {
+    "cityCorpPoura": {
+      "home": {
+        "title": "City Corp Pouras",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new City Corp Poura",
+        "createOrEditLabel": "Create or edit a City Corp Poura",
+        "notFound": "No City Corp Pouras found"
+      },
+      "created": "A new City Corp Poura is created with identifier {{ param }}",
+      "updated": "A City Corp Poura is updated with identifier {{ param }}",
+      "deleted": "A City Corp Poura is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete City Corp Poura {{ id }}?"
+      },
+      "detail": {
+        "title": "City Corp Poura"
+      },
+      "id": "ID",
+      "name": "Name",
+      "ward": "Ward",
+      "address": "Address",
+      "district": "District",
+      "upazila": "Upazila",
+      "rmo": "Rmo"
+    }
+  }
+}

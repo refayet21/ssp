@@ -1,0 +1,42 @@
+{
+  "annotations": {
+    "changelogDate": "20240701144934"
+  },
+  "applications": "*",
+  "entityTableName": "jhi_union",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Union",
+  "relationships": [
+    {
+      "otherEntityName": "ward",
+      "otherEntityRelationshipName": "union",
+      "relationshipName": "ward",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "address",
+      "otherEntityRelationshipName": "union",
+      "relationshipName": "address",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "upazila",
+      "relationshipName": "upazila",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

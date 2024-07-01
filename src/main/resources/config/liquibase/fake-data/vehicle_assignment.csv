@@ -1,0 +1,11 @@
+id;start_date;end_date;is_primary;is_rental
+1;2024-07-01;2024-06-30;true;false
+2;2024-06-30;2024-07-01;true;true
+3;2024-07-01;2024-07-01;false;true
+4;2024-06-30;2024-07-01;true;true
+5;2024-07-01;2024-06-30;true;false
+6;2024-07-01;2024-07-01;true;true
+7;2024-07-01;2024-06-30;true;false
+8;2024-07-01;2024-07-01;false;true
+9;2024-06-30;2024-07-01;false;true
+10;2024-06-30;2024-06-30;false;true

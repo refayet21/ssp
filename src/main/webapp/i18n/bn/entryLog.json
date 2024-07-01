@@ -1,0 +1,32 @@
+{
+  "cpamainApp": {
+    "entryLog": {
+      "home": {
+        "title": "Entry Logs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Entry Log",
+        "createOrEditLabel": "Create or edit a Entry Log",
+        "notFound": "No Entry Logs found"
+      },
+      "created": "A new Entry Log is created with identifier {{ param }}",
+      "updated": "A Entry Log is updated with identifier {{ param }}",
+      "deleted": "A Entry Log is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Entry Log {{ id }}?"
+      },
+      "detail": {
+        "title": "Entry Log"
+      },
+      "id": "ID",
+      "eventTime": "Event Time",
+      "direction": "Direction",
+      "passStatus": "Pass Status",
+      "actionType": "Action Type",
+      "pass": "Pass",
+      "lane": "Lane",
+      "help": {
+        "eventTime": "fieldName"
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <!--
+        Added the constraints for entity AgencyLicense.
+    -->
+    <changeSet id="20240701144954-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="verified_by_id"
+                                 baseTableName="agency_license"
+                                 constraintName="fk_agency_license__verified_by_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="jhi_user"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="agency_license_type_id"
+                                 baseTableName="agency_license"
+                                 constraintName="fk_agency_license__agency_license_type_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="agency_license_type"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="belongs_to_id"
+                                 baseTableName="agency_license"
+                                 constraintName="fk_agency_license__belongs_to_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="agency"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="issued_by_id"
+                                 baseTableName="agency_license"
+                                 constraintName="fk_agency_license__issued_by_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="agency"
+                                 />
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,32 @@
+{
+  "annotations": {
+    "changelogDate": "20240701144935"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "Ward",
+  "relationships": [
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "cityCorpPoura",
+      "relationshipName": "cityCorpPoura",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "union",
+      "relationshipName": "union",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <!--
+        Added the constraints for entity Pass.
+    -->
+    <changeSet id="20240701144945-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="pass_type_id"
+                                 baseTableName="pass"
+                                 constraintName="fk_pass__pass_type_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="pass_type"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="requested_by_id"
+                                 baseTableName="pass"
+                                 constraintName="fk_pass__requested_by_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="jhi_user"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="assignment_id"
+                                 baseTableName="pass"
+                                 constraintName="fk_pass__assignment_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="assignment"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="vehicle_assignment_id"
+                                 baseTableName="pass"
+                                 constraintName="fk_pass__vehicle_assignment_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="vehicle_assignment"
+                                 />
+    </changeSet>
+</databaseChangeLog>

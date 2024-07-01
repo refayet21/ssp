@@ -1,0 +1,40 @@
+{
+  "cpamainApp": {
+    "passType": {
+      "home": {
+        "title": "Pass Types",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Pass Type",
+        "createOrEditLabel": "Create or edit a Pass Type",
+        "notFound": "No Pass Types found"
+      },
+      "created": "A new Pass Type is created with identifier {{ param }}",
+      "updated": "A Pass Type is updated with identifier {{ param }}",
+      "deleted": "A Pass Type is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Pass Type {{ id }}?"
+      },
+      "detail": {
+        "title": "Pass Type"
+      },
+      "id": "ID",
+      "name": "Name",
+      "shortName": "Short Name",
+      "isActive": "Is Active",
+      "printedName": "Printed Name",
+      "issueFee": "Issue Fee",
+      "renewFee": "Renew Fee",
+      "cancelFee": "Cancel Fee",
+      "minimumDuration": "Minimum Duration",
+      "maximumDuration": "Maximum Duration",
+      "issueChannelType": "Issue Channel Type",
+      "taxCode": "Tax Code",
+      "passMediaType": "Pass Media Type",
+      "passUserType": "Pass User Type",
+      "agency": "Agency",
+      "help": {
+        "name": "fieldName"
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "cpamainApp": {
+    "vehicle": {
+      "home": {
+        "title": "Vehicles",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Vehicle",
+        "createOrEditLabel": "Create or edit a Vehicle",
+        "notFound": "No Vehicles found"
+      },
+      "created": "A new Vehicle is created with identifier {{ param }}",
+      "updated": "A Vehicle is updated with identifier {{ param }}",
+      "deleted": "A Vehicle is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Vehicle {{ id }}?"
+      },
+      "detail": {
+        "title": "Vehicle"
+      },
+      "id": "ID",
+      "name": "Name",
+      "regNo": "Reg No",
+      "zone": "Zone",
+      "category": "Category",
+      "serialNo": "Serial No",
+      "vehicleNo": "Vehicle No",
+      "chasisNo": "Chasis No",
+      "isPersonal": "Is Personal",
+      "isBlackListed": "Is Black Listed",
+      "logStatus": "Log Status",
+      "document": "Document",
+      "vehicleAssigment": "Vehicle Assigment",
+      "vehicleType": "Vehicle Type",
+      "help": {
+        "name": "fieldName"
+      }
+    }
+  }
+}

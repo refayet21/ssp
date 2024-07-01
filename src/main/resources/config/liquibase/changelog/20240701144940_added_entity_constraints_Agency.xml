@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <!--
+        Added the constraints for entity Agency.
+    -->
+    <changeSet id="20240701144940-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="agency_type_id"
+                                 baseTableName="agency"
+                                 constraintName="fk_agency__agency_type_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="agency_type"
+                                 />
+    </changeSet>
+</databaseChangeLog>

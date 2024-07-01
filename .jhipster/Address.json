@@ -1,0 +1,74 @@
+{
+  "annotations": {
+    "changelogDate": "20240701144928"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "addressLineOne",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "addressLineTwo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "addressLineThree",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "addressType",
+      "fieldType": "AddressType",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "PRESENT,PERMANENT,HQ,BRANCH"
+    }
+  ],
+  "name": "Address",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "cityCorpPoura",
+      "relationshipName": "cityCorpPoura",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "union",
+      "relationshipName": "union",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "postOffice",
+      "relationshipName": "postOffice",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "country",
+      "relationshipName": "country",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "person",
+      "relationshipName": "person",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "agency",
+      "relationshipName": "agency",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

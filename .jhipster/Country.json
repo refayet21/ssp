@@ -1,0 +1,35 @@
+{
+  "annotations": {
+    "changelogDate": "20240701144937"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isoCode",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Country",
+  "relationships": [
+    {
+      "otherEntityName": "person",
+      "otherEntityRelationshipName": "nationality",
+      "relationshipName": "person",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "address",
+      "otherEntityRelationshipName": "country",
+      "relationshipName": "address",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

@@ -1,0 +1,79 @@
+{
+  "annotations": {
+    "changelogDate": "20240701144950"
+  },
+  "applications": "*",
+  "documentation": "The Vehicle entity.\\n@author A true hipster",
+  "fields": [
+    {
+      "documentation": "fieldName",
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "regNo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "zone",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "category",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "serialNo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "vehicleNo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "chasisNo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isPersonal",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "isBlackListed",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "logStatus",
+      "fieldType": "LogStatusType",
+      "fieldValues": "DRAFT,PENDING,APPROVED,REJECTED"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Vehicle",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "document",
+      "otherEntityRelationshipName": "vehicle",
+      "relationshipName": "document",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "vehicleAssignment",
+      "otherEntityRelationshipName": "vehicle",
+      "relationshipName": "vehicleAssigment",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "vehicleType",
+      "relationshipName": "vehicleType",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

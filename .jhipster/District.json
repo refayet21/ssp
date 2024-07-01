@@ -1,0 +1,47 @@
+{
+  "annotations": {
+    "changelogDate": "20240701144930"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "District",
+  "relationships": [
+    {
+      "otherEntityName": "upazila",
+      "otherEntityRelationshipName": "district",
+      "relationshipName": "upazila",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "cityCorpPoura",
+      "otherEntityRelationshipName": "district",
+      "relationshipName": "cityCorpPoura",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "postOffice",
+      "otherEntityRelationshipName": "district",
+      "relationshipName": "postOffice",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "division",
+      "relationshipName": "division",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

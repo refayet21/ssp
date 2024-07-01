@@ -1,0 +1,54 @@
+{
+  "annotations": {
+    "changelogDate": "20240701144951"
+  },
+  "applications": "*",
+  "documentation": "The VehicleAssigment entity.\\n@author A true hipster",
+  "fields": [
+    {
+      "fieldName": "startDate",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "endDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "isPrimary",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "isRental",
+      "fieldType": "Boolean"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "VehicleAssignment",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "pass",
+      "otherEntityRelationshipName": "vehicleAssignment",
+      "relationshipName": "pass",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "agency",
+      "relationshipName": "agency",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "vehicle",
+      "otherEntityRelationshipName": "vehicleAssigment",
+      "relationshipName": "vehicle",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

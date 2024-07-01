@@ -1,0 +1,11 @@
+id;name;short_name;is_active;printed_name;issue_fee;renew_fee;cancel_fee;minimum_duration;maximum_duration;issue_channel_type;tax_code;pass_media_type;pass_user_type
+1;until gee anxious;modulo moan oh;false;smoggy;28772.5;20397.36;13088.59;6172;27843;ONLINE;VAT;CHIPCARD;VEHICLE
+2;cummerbund neuter yahoo;drat;true;woot;26428.35;28936.86;10930.4;21924;502;ONPREM;VAT;BARCODE;VEHICLE
+3;exact rundown;insult fooey failing;true;bright indoctrinate;7150.1;22501.94;8079.53;18820;12224;THIRD_PARTY;NOVAT;BIOMETRIC;BOTH
+4;lest;nearly;true;circa because stow;1037.2;3669.33;5368.32;3362;1008;ONLINE;NOVAT;QRCODE;HUMAN
+5;dust;tire ick;true;pish unsightly finally;23384.39;19934.79;21975.97;15110;24356;ONPREM;VAT;QRCODE;BOTH
+6;lopsided ah concerning;furthermore yuck notwithstanding;false;beard of;28067.03;13503.02;3748.06;6324;28574;THIRD_PARTY;NOVAT;BIOMETRIC;BOTH
+7;normal;safely;true;athwart toward kiddingly;5567.87;18968.84;21281.94;4390;1250;ONLINE;VAT;BARCODE;HUMAN
+8;boohoo pish;by;true;stick;2689.11;2180.26;5941.09;8138;4017;THIRD_PARTY;NOVAT;CHIPCARD;BOTH
+9;stonework jellybeans;concerning major;false;via;16753.59;15044.25;25558.93;1091;7514;ONPREM;VAT;QRCODE;HUMAN
+10;meh;chime foray;false;for pinafore whose;7690.64;30732.63;29328.02;8276;7052;THIRD_PARTY;VAT;BARCODE;VEHICLE

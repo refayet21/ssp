@@ -1,0 +1,56 @@
+{
+  "annotations": {
+    "changelogDate": "20240701144947"
+  },
+  "applications": "*",
+  "documentation": "The Gate entity.\\n@author A true hipster",
+  "fields": [
+    {
+      "documentation": "fieldName",
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "shortName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lat",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "lon",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "gateType",
+      "fieldType": "GateType",
+      "fieldValues": "HUMAN,VEHICLE"
+    },
+    {
+      "fieldName": "isActive",
+      "fieldType": "Boolean"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Gate",
+  "relationships": [
+    {
+      "otherEntityName": "lane",
+      "otherEntityRelationshipName": "gate",
+      "relationshipName": "lane",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "zone",
+      "otherEntityRelationshipName": "gate",
+      "relationshipName": "zone",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

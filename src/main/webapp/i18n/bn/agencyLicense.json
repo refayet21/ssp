@@ -1,0 +1,34 @@
+{
+  "cpamainApp": {
+    "agencyLicense": {
+      "home": {
+        "title": "Agency Licenses",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Agency License",
+        "createOrEditLabel": "Create or edit a Agency License",
+        "notFound": "No Agency Licenses found"
+      },
+      "created": "A new Agency License is created with identifier {{ param }}",
+      "updated": "A Agency License is updated with identifier {{ param }}",
+      "deleted": "A Agency License is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Agency License {{ id }}?"
+      },
+      "detail": {
+        "title": "Agency License"
+      },
+      "id": "ID",
+      "filePath": "File Path",
+      "serialNo": "Serial No",
+      "issueDate": "Issue Date",
+      "expiryDate": "Expiry Date",
+      "verifiedBy": "Verified By",
+      "agencyLicenseType": "Agency License Type",
+      "belongsTo": "Belongs To",
+      "issuedBy": "Issued By",
+      "help": {
+        "filePath": "fieldName"
+      }
+    }
+  }
+}

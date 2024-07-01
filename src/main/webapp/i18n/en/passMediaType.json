@@ -1,0 +1,11 @@
+{
+  "cpamainApp": {
+    "PassMediaType": {
+      "null": "",
+      "BARCODE": "BARCODE",
+      "QRCODE": "QRCODE",
+      "CHIPCARD": "CHIPCARD",
+      "BIOMETRIC": "BIOMETRIC"
+    }
+  }
+}

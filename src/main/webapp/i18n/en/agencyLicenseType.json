@@ -1,0 +1,29 @@
+{
+  "cpamainApp": {
+    "agencyLicenseType": {
+      "home": {
+        "title": "Agency License Types",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Agency License Type",
+        "createOrEditLabel": "Create or edit a Agency License Type",
+        "notFound": "No Agency License Types found"
+      },
+      "created": "A new Agency License Type is created with identifier {{ param }}",
+      "updated": "A Agency License Type is updated with identifier {{ param }}",
+      "deleted": "A Agency License Type is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Agency License Type {{ id }}?"
+      },
+      "detail": {
+        "title": "Agency License Type"
+      },
+      "id": "ID",
+      "name": "Name",
+      "isActive": "Is Active",
+      "agencyLicense": "Agency License",
+      "help": {
+        "name": "fieldName"
+      }
+    }
+  }
+}

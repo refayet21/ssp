@@ -1,0 +1,11 @@
+id;name;is_active;description;document_master_type;requires_verification
+1;snob relieved;false;to;VEHICLEDOC;true
+2;gah transmit overact;true;fan fourths queasily;AGENCYDOC;true
+3;yuck after ugh;false;ceramics busy meh;AGENCYDOC;true
+4;instead lilac;false;ack monitoring knock;VEHICLEDOC;false
+5;till except if;true;by;VEHICLEDOC;true
+6;limited illiterate;true;nut finally nor;AGENCYDOC;false
+7;since;false;so;PERSONDOC;false
+8;tame inquisitively;false;ceremony;AGENCYDOC;true
+9;ew for;true;pfft;VEHICLEDOC;true
+10;furthermore;true;provided;AGENCYDOC;false

@@ -1,0 +1,37 @@
+{
+  "cpamainApp": {
+    "pass": {
+      "home": {
+        "title": "Passes",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Pass",
+        "createOrEditLabel": "Create or edit a Pass",
+        "notFound": "No Passes found"
+      },
+      "created": "A new Pass is created with identifier {{ param }}",
+      "updated": "A Pass is updated with identifier {{ param }}",
+      "deleted": "A Pass is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Pass {{ id }}?"
+      },
+      "detail": {
+        "title": "Pass"
+      },
+      "id": "ID",
+      "collectedFee": "Collected Fee",
+      "fromDate": "From Date",
+      "endDate": "End Date",
+      "status": "Status",
+      "passNumber": "Pass Number",
+      "mediaSerial": "Media Serial",
+      "entryLog": "Entry Log",
+      "passType": "Pass Type",
+      "requestedBy": "Requested By",
+      "assignment": "Assignment",
+      "vehicleAssignment": "Vehicle Assignment",
+      "help": {
+        "collectedFee": "fieldName"
+      }
+    }
+  }
+}

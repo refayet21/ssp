@@ -1,0 +1,80 @@
+{
+  "annotations": {
+    "changelogDate": "20240701144945"
+  },
+  "applications": "*",
+  "documentation": "The Pass entity.\\n@author A true hipster",
+  "fields": [
+    {
+      "documentation": "fieldName",
+      "fieldName": "collectedFee",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "fromDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "endDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "PassStatusType",
+      "fieldValues": "REQUESTED,PRINTED,ACTIVATED,READY,BLOCKED,CANCEL,EXPIRED"
+    },
+    {
+      "fieldName": "passNumber",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "mediaSerial",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Pass",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "entryLog",
+      "otherEntityRelationshipName": "pass",
+      "relationshipName": "entryLog",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "passType",
+      "relationshipName": "passType",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityField": "login",
+      "otherEntityName": "user",
+      "relationshipName": "requestedBy",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required",
+      "relationshipWithBuiltInEntity": true
+    },
+    {
+      "otherEntityName": "assignment",
+      "relationshipName": "assignment",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityName": "vehicleAssignment",
+      "otherEntityRelationshipName": "pass",
+      "relationshipName": "vehicleAssignment",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

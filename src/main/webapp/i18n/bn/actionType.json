@@ -1,0 +1,9 @@
+{
+  "cpamainApp": {
+    "ActionType": {
+      "null": "",
+      "ALLOW": "ALLOW",
+      "DENY": "DENY"
+    }
+  }
+}

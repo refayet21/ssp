@@ -1,0 +1,69 @@
+{
+  "annotations": {
+    "changelogDate": "20240701144938"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "isPrimary",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "serial",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "issueDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "expiryDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "filePath",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Document",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityField": "login",
+      "otherEntityName": "user",
+      "relationshipName": "verifiedBy",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one",
+      "relationshipWithBuiltInEntity": true
+    },
+    {
+      "otherEntityName": "documentType",
+      "relationshipName": "documentType",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityName": "person",
+      "relationshipName": "person",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "vehicle",
+      "relationshipName": "vehicle",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "agency",
+      "relationshipName": "agency",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

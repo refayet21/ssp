@@ -1,0 +1,15 @@
+export enum PassStatusType {
+  REQUESTED = 'REQUESTED',
+
+  PRINTED = 'PRINTED',
+
+  ACTIVATED = 'ACTIVATED',
+
+  READY = 'READY',
+
+  BLOCKED = 'BLOCKED',
+
+  CANCEL = 'CANCEL',
+
+  EXPIRED = 'EXPIRED',
+}

@@ -1,0 +1,54 @@
+{
+  "annotations": {
+    "changelogDate": "20240701144948"
+  },
+  "applications": "*",
+  "documentation": "The Lane entity.\\n@author A true hipster",
+  "fields": [
+    {
+      "documentation": "fieldName",
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "shortName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "direction",
+      "fieldType": "DirectionType",
+      "fieldValues": "IN,OUT,BOTH"
+    },
+    {
+      "fieldName": "isActive",
+      "fieldType": "Boolean"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Lane",
+  "relationships": [
+    {
+      "otherEntityName": "entryLog",
+      "otherEntityRelationshipName": "lane",
+      "relationshipName": "entryLog",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "gate",
+      "relationshipName": "gate",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "accessProfile",
+      "otherEntityRelationshipName": "lane",
+      "relationshipName": "accessProfile",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

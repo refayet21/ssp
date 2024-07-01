@@ -1,0 +1,11 @@
+{
+  "cpamainApp": {
+    "AddressType": {
+      "null": "",
+      "PRESENT": "PRESENT",
+      "PERMANENT": "PERMANENT",
+      "HQ": "HQ",
+      "BRANCH": "BRANCH"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "cpamainApp": {
+    "address": {
+      "home": {
+        "title": "Addresses",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Address",
+        "createOrEditLabel": "Create or edit a Address",
+        "notFound": "No Addresses found"
+      },
+      "created": "A new Address is created with identifier {{ param }}",
+      "updated": "A Address is updated with identifier {{ param }}",
+      "deleted": "A Address is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Address {{ id }}?"
+      },
+      "detail": {
+        "title": "Address"
+      },
+      "id": "ID",
+      "addressLineOne": "Address Line One",
+      "addressLineTwo": "Address Line Two",
+      "addressLineThree": "Address Line Three",
+      "addressType": "Address Type",
+      "cityCorpPoura": "City Corp Poura",
+      "union": "Union",
+      "postOffice": "Post Office",
+      "country": "Country",
+      "person": "Person",
+      "agency": "Agency"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "annotations": {
+    "changelogDate": "20240701144929"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "Division",
+  "relationships": [
+    {
+      "otherEntityName": "district",
+      "otherEntityRelationshipName": "division",
+      "relationshipName": "district",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

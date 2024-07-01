@@ -1,0 +1,32 @@
+{
+  "annotations": {
+    "changelogDate": "20240701144941"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "shortName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isActive",
+      "fieldType": "Boolean"
+    }
+  ],
+  "name": "AgencyType",
+  "relationships": [
+    {
+      "otherEntityName": "agency",
+      "otherEntityRelationshipName": "agencyType",
+      "relationshipName": "agency",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

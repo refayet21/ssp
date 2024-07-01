@@ -1,0 +1,14 @@
+{
+  "cpamainApp": {
+    "PassStatusType": {
+      "null": "",
+      "REQUESTED": "REQUESTED",
+      "PRINTED": "PRINTED",
+      "ACTIVATED": "ACTIVATED",
+      "READY": "READY",
+      "BLOCKED": "BLOCKED",
+      "CANCEL": "CANCEL",
+      "EXPIRED": "EXPIRED"
+    }
+  }
+}

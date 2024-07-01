@@ -1,0 +1,62 @@
+{
+  "annotations": {
+    "changelogDate": "20240701144954"
+  },
+  "applications": "*",
+  "documentation": "The License entity.\\n@author A true hipster",
+  "fields": [
+    {
+      "documentation": "fieldName",
+      "fieldName": "filePath",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "serialNo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "issueDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "expiryDate",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "AgencyLicense",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityField": "login",
+      "otherEntityName": "user",
+      "relationshipName": "verifiedBy",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one",
+      "relationshipWithBuiltInEntity": true
+    },
+    {
+      "otherEntityName": "agencyLicenseType",
+      "relationshipName": "agencyLicenseType",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityName": "agency",
+      "otherEntityRelationshipName": "license",
+      "relationshipName": "belongsTo",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "agency",
+      "otherEntityRelationshipName": "issuer",
+      "relationshipName": "issuedBy",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

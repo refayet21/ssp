@@ -1,0 +1,10 @@
+{
+  "cpamainApp": {
+    "DirectionType": {
+      "null": "",
+      "IN": "IN",
+      "OUT": "OUT",
+      "BOTH": "BOTH"
+    }
+  }
+}
