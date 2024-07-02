@@ -9,6 +9,7 @@ import java.io.Serializable;
 /**
  * A Address.
  */
+
 @Entity
 @Table(name = "address")
 @SuppressWarnings("common-java:DuplicatedBlocks")
@@ -41,7 +42,7 @@ public class Address implements Serializable {
     private CityCorpPoura cityCorpPoura;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JsonIgnoreProperties(value = { "wards", "addresses", "upazila" }, allowSetters = true)
+    @JsonIgnoreProperties(value = { "wards", "addresses" })
     private Union union;
 
     @ManyToOne(optional = false)

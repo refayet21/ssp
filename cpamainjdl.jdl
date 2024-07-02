@@ -110,7 +110,7 @@ entity Document{
     issueDate LocalDate
     expiryDate LocalDate
     filePath String
-    
+
 }
 paginate Document with pagination
 filter Document
@@ -126,7 +126,7 @@ entity DocumentType {
     description String
     documentMasterType DocumentMasterType required
     requiresVerification Boolean
-    
+
 }
 filter DocumentType
 
@@ -139,7 +139,7 @@ enum DocumentMasterType  {
  */
 relationship OneToMany {
     DocumentType to Document {documentType required}
-  
+
 }
 
 
@@ -487,5 +487,5 @@ relationship ManyToOne {
 // dto * with mapstruct
  // Set service options to all except few
 service all with serviceImpl
-
+dto Address;
 

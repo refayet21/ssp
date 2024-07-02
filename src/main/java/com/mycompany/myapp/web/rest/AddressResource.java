@@ -3,6 +3,7 @@ package com.mycompany.myapp.web.rest;
 import com.mycompany.myapp.domain.Address;
 import com.mycompany.myapp.repository.AddressRepository;
 import com.mycompany.myapp.service.AddressService;
+import com.mycompany.myapp.service.dto.AddressDTO;
 import com.mycompany.myapp.web.rest.errors.BadRequestAlertException;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
@@ -165,9 +166,9 @@ public class AddressResource {
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the address, or with status {@code 404 (Not Found)}.
      */
     @GetMapping("/{id}")
-    public ResponseEntity<Address> getAddress(@PathVariable("id") Long id) {
+    public ResponseEntity<AddressDTO> getAddress(@PathVariable("id") Long id) {
         log.debug("REST request to get Address : {}", id);
-        Optional<Address> address = addressService.findOne(id);
+        Optional<AddressDTO> address = addressService.findOne(id);
         return ResponseUtil.wrapOrNotFound(address);
     }
 

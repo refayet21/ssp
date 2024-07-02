@@ -1,6 +1,7 @@
 package com.mycompany.myapp.service;
 
 import com.mycompany.myapp.domain.Address;
+import com.mycompany.myapp.service.dto.AddressDTO;
 import java.util.Optional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -55,7 +56,7 @@ public interface AddressService {
      * @param id the id of the entity.
      * @return the entity.
      */
-    Optional<Address> findOne(Long id);
+    Optional<AddressDTO> findOne(Long id);
 
     /**
      * Delete the "id" address.

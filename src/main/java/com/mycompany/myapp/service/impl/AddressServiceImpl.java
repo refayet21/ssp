@@ -1,8 +1,12 @@
 package com.mycompany.myapp.service.impl;
 
 import com.mycompany.myapp.domain.Address;
+import com.mycompany.myapp.domain.District;
+import com.mycompany.myapp.domain.Union;
+import com.mycompany.myapp.domain.Upazila;
 import com.mycompany.myapp.repository.AddressRepository;
 import com.mycompany.myapp.service.AddressService;
+import com.mycompany.myapp.service.dto.AddressDTO;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -74,11 +78,44 @@ public class AddressServiceImpl implements AddressService {
         return addressRepository.findAllWithEagerRelationships(pageable);
     }
 
+    //    @Override
+    //    @Transactional(readOnly = true)
+    //    public Optional<Address> findOne(Long id) {
+    //        log.debug("Request to get Address : {}", id);
+    //        return addressRepository.findOneWithEagerRelationships(id);
+    //    }
+
     @Override
     @Transactional(readOnly = true)
-    public Optional<Address> findOne(Long id) {
+    public Optional<AddressDTO> findOne(Long id) {
         log.debug("Request to get Address : {}", id);
-        return addressRepository.findOneWithEagerRelationships(id);
+        Optional<Address> addressOptional = addressRepository.findOneWithEagerRelationships(id);
+        if (!addressOptional.isPresent()) {
+            return Optional.empty();
+        }
+
+        Address address = addressOptional.get();
+        AddressDTO addressDTO = new AddressDTO();
+        // Map address properties to DTO
+        addressDTO.setId(address.getId());
+        addressDTO.setAddressLineOne(address.getAddressLineOne());
+        // ... (map other address properties)
+
+        // Access related entities for union, upazila, and district names
+        Union union = address.getUnion();
+        if (union != null) {
+            addressDTO.setUnionName(union.getName());
+        }
+        Upazila upazila = address.getUnion().getUpazila(); // Assuming upazila is accessed through union
+        if (upazila != null) {
+            addressDTO.setUpazilaName(upazila.getName());
+            District district = upazila.getDistrict(); // Assuming district is accessed through upazila
+            if (district != null) {
+                addressDTO.setDistrictName(district.getName());
+            }
+        }
+
+        return Optional.of(addressDTO);
     }
 
     @Override

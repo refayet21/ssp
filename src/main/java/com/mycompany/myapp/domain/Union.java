@@ -36,7 +36,7 @@ public class Union implements Serializable {
 
     @ManyToOne(optional = false)
     @NotNull
-    @JsonIgnoreProperties(value = { "unions", "cityCorpPouras", "district" }, allowSetters = true)
+    @JsonIgnoreProperties(value = { "unions", "cityCorpPouras" })
     private Upazila upazila;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
